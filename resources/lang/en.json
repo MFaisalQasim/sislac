@@ -1,0 +1,105 @@
+{
+    
+    "2022 © Laravel":"2022 © Sislac",
+    "Design & Develop by Themesbrand":"Design & Develop by SGBD",
+    
+    "Appointments":"Atendimento",
+    
+    "Doctors":"Médicos",
+    "List of Doctors":"Lista De Médicos",
+    "Add New Doctor":"Adicionar Novo Médico",
+    "Update Doctor Details":"Atualizar Informaçoes DO Médico",
+    "Patients":"Pacientes",
+    "List of Patients":"Lista De Pacientes",
+    "Add New Patient":"Novo Paciente",
+    "Receptionist":"Recepcionistas",
+    "List of Receptionist":"",
+    "Add New Receptionist":"Adicionar Recepcionista",
+    "Appointment":"Atendimento",
+    "List of Appointment":"Lista De Atendimentos",
+    "":"Novo Atendimento",
+    "Create Appointment ":"Novo Atendimento",
+    "Insert Result":"",
+    "Exam":"Exames",
+    "List of Exams":"Lista De Exames",
+    "Add New Exam":"Novo Exame",
+    
+    "Category":"Categoria",
+    "New Category":"Nova Categoria",
+    
+    "Name":"Nome",
+    "abbreviation":"Abreviação",
+    "options":"Opções",
+    "Search Name":"Pesquisar Nome",
+    "Filter":"Filtrar",
+    "Save":"Salvar",
+    
+    "Exam Name":"Nome do Exame",
+    "Qty. Label":"Qtd. Etiqueta",
+    "Price R$":"Preço R$",
+    "New Exam":"Novo Exame",
+    "Deadline Days":"Prazo",
+    "Destiny":"Destino",
+    "Label Group":"Grupo De Rótulos",
+    "New Parameters":" Filtro de Referência",
+    "Report Parameters":"Parâmetros do Relatório",
+    
+    "Doctor Data":"Informaçoes do Médico",
+    "Doctor List":"Lista De Médicos",
+    "Doctor List ":"Lista De Médicos",
+    "Phone":"Telefone",
+    "Email":"E-mail",
+    "Email ":"E-mail",
+    "Specialty":"",
+    "Doctor Name":"Nome do Médico",
+    "Sex":"Sexo",
+    "Zip Code":"CEP",
+    "Street/ Ave":"Rua/ Avenida",
+    "Aadvice ":"Conelho",
+    "City":"Cidade",
+    "Date":"Data",
+    "Basic Information":"Informaçoes Básicas",
+    "First Name":"Nome",
+    "First Name ":"Nome",
+    "Last Name":"Sobrenome",
+    "Last Name ":"Sobrenome",
+    "Contact Number":"Telefone",
+    "Contact Number ":"Telefone",
+    "Password":"Senha",
+    "Profile Photo":"Foto do Perfil",
+    "Profile Photo ":"Foto do Perfil",
+    
+    "Enter Patient Name":"Digite o nome do Paciente",
+    "Select Gender":"Selecione",
+    "Zipcode":"CEP",
+    "Address":"Endereço",
+    "city":"Cidade",
+    "Enter Email":"Digite o E-mail",
+    "Enter your password":"Digite a Senha",
+
+    
+    "Appointment List":"Lista de Atendimentos",
+    "Today's Appointment List":"Atendimentos hoje",
+    "Pending Appointment List":"Pendentes",
+    "Upcoming Appointment List":"",
+    "Complete Appointment List":"Concluidos",
+    "Cancel Appointment List":"",
+    
+    "Receptionist List ":"Lista De Recepcionistas",
+    "Receptionist List":"Lista De Recepcionistas",
+    "Back to Receptionist List":"Volta A Lista De Recepcionista",
+    
+    "Id Appointment":"ID Atendimento",
+    
+    
+    
+    "Male":"Masculino",
+    "Female":"Feminino",
+    
+    "Search CRM":"Pesquisar CRM",
+    "Back to Profile":"Voltar ao Perdil",
+    "Update Details":"Atualizar"
+ 
+ 
+    
+}
