@@ -81,6 +81,9 @@ Route::get('inserir-resultado8', 'AppointmentController@appointmentdata8');
 Route::get('inserir-resultado9', 'AppointmentController@appointmentdata9');
 Route::get('inserir-resultado10', 'AppointmentController@appointmentdata10');
 
+Route::get('verificar-resultado', 'AppointmentController@verifyResult');
+Route::get('verificar-resultado/approve', 'AppointmentController@verifyResultApproves');
+
 Route::post('appointment-status/{id}', 'AppointmentController@appointment_status');
 Route::post('updateStatus', 'AppointmentController@updateStatus');
 Route::get('getMonthlyAppointments', 'ReportController@getMonthlyAppointments');

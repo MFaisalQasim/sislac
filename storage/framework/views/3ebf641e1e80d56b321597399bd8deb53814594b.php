@@ -1,7 +1,7 @@
-@extends('layouts.master-layouts')
-@section('title')
-    {{ __('New Appointement Page') }}
-@endsection
+<?php $__env->startSection('title'); ?>
+    <?php echo e(__('New Appointement Page')); ?>
+
+<?php $__env->stopSection(); ?>
 <style>
     body {
         background-color: #f8f8fb !important;
@@ -167,31 +167,31 @@
         width: 100% !important;
     }
 </style>
-@section('body')
+<?php $__env->startSection('body'); ?>
 
     <body data-topbar="dark" data-layout="horizontal">
-    @endsection
-    @section('content')
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('content'); ?>
         <!-- start page title -->
-        @component('components.breadcrumb')
-            @slot('title')
+        <?php $__env->startComponent('components.breadcrumb'); ?>
+            <?php $__env->slot('title'); ?>
                 INSERIR RESULTADO
-            @endslot
-            @slot('li_1')
+            <?php $__env->endSlot(); ?>
+            <?php $__env->slot('li_1'); ?>
                 Dashboard
-            @endslot
-            @slot('li_2')
+            <?php $__env->endSlot(); ?>
+            <?php $__env->slot('li_2'); ?>
                 Appointment
-            @endslot
-        @endcomponent
+            <?php $__env->endSlot(); ?>
+        <?php echo $__env->renderComponent(); ?>
         <div class="row">
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ url('pending-appointment') }}">
+                        <a href="<?php echo e(url('pending-appointment')); ?>">
                             <button class="btn btn-primary" type="button">
 
-                                {{ __('Back Appointment') }}</button></a>
+                                <?php echo e(__('Back Appointment')); ?></button></a>
 
 
                         <!-- Tab panes -->
@@ -203,12 +203,12 @@
                                         style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
                                             <tr>
-                                                <th>{{ __('Id Appointment') }}</th>
-                                                <th>{{ __('name') }}</th>
-                                                <th>{{ __('Sex') }}</th>
-                                                <th>{{ __('Idade') }}</th>
-                                                <th>{{ __('Date') }}</th>
-                                                <th>{{ __('Status') }}</th>
+                                                <th><?php echo e(__('Id Appointment')); ?></th>
+                                                <th><?php echo e(__('name')); ?></th>
+                                                <th><?php echo e(__('Sex')); ?></th>
+                                                <th><?php echo e(__('Idade')); ?></th>
+                                                <th><?php echo e(__('Date')); ?></th>
+                                                <th><?php echo e(__('Status')); ?></th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -277,9 +277,8 @@
                         </div>
                     </div>
                     <hr />
-                    <div class="container-fluid">
+                    <div class="container-fluid" >
                         <div class="row" style="margin: 50px">
-
 
                             <div class="col-md-12 col-lg-8">
                                 <p><b>
@@ -289,269 +288,48 @@
                                     </b><br></font>
                                 </p>
                                 <b>
-                                    <font style="vertical-align: inherit;font-size: 11px;">
+                                    <font style="vertical-align: inherit;    font-size: 11px;">
                                         <font style="vertical-align: inherit;">Método:&nbsp;</font>
                                     </font>
                                 </b>
-                                <font style="vertical-align: inherit;font-size: 11px;">
+                                <font style="vertical-align: inherit;    font-size: 11px;">
                                     <font style="vertical-align: inherit;">
                                         CONVENCIONAL (PAPANICOLAU)
                                     </font>
                                 </font><br></font>
                                 <b>
-                                    <font style="vertical-align: inherit;font-size: 11px;">
+                                    <font style="vertical-align: inherit;    font-size: 11px;">
                                         <font style="vertical-align: inherit;">Material Biológico:&nbsp;</font>
                                     </font>
                                 </b>
-                                <font style="vertical-align: inherit;font-size: 11px;">
+                                <font style="vertical-align: inherit;    font-size: 11px;">
                                     <font style="vertical-align: inherit;">
                                         ESFREGAÇO CÉRVICO-VAGINAL
                                     </font>
                                 </font><br></font>
                                 <hr />
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="col-6  p-0">
-                                            <p><b>
-                                                    <font style="vertical-align: inherit; ">
-                                                        <font style="vertical-align: inherit;">SAMPLE SUITABILITY:</font>
-                                                    </font>
-                                                </b> <br>
-                                            </p>
-                                            <p> <b>
-                                                    <font style="vertical-align: inherit; font-size: 11px;">
-                                                        <font style="vertical-align: inherit;">
-                                                            SATISFACTORY ...........................
-                                                        </font>
-                                                        <input class="form-control"
-                                                            style="float: right; width: 50px !important; height: 25px!important;
+                                <p><b>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">SAMPLE SUITABILITY:</font>
+                                        </font>
+                                    </b> <br>
+                                    <font style="vertical-align: inherit;    font-size: 11px;">
+                                        <font style="vertical-align: inherit;">
+                                            SATISFACTORY ...........................
+                                        </font>
+                                    </font><input class="form-control"
+                                        style=" width: 45px !important; height: 25px!important;
     display: inline;  color: #556ee6;"
-                                                            type="text" name="destiny" value="YES">
-                                                    </font>
-                                                </b>
-                                            </p>
-                                            <p> <b>
-                                                    <font style="vertical-align: inherit; font-size: 11px;">
-                                                        <font style="vertical-align: inherit;">
-                                                            SAMPLE STANDARD ............
-                                                        </font>
-                                                        <input class="form-control"
-                                                            style="float: right; width: 50px !important; height: 25px!important;
-    display: inline;  color: #556ee6;"
-                                                            type="text" name="destiny" value="">
-                                                    </font>
-                                                </b>
-                                            </p>
-                                            <p><b>
-                                                    <font style="vertical-align: inherit; font-size: 11px;">
-                                                        <font style="vertical-align: inherit;">EPITHELIUM REPRESENTED IN THE
-                                                            SAMPLE
-                                                        </font>
-                                                    </font>
-                                                </b> </p>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <div style="float:right">
-                                            <p><input class="form-control"
-                                                    style=" width: 45px !important; height: 25px!important;
-                    display: inline;  "
-                                                    type="text" name="destiny" value=""></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 p-0">
-                                        <p><input class="form-control"
-                                                style="width: 100%!important; height: 25px!important;
-    display: inline;  "
-                                                type="text" name="destiny" value=""></p>
-
-                                    </div>
-                                    <div class="col-12">
-
-                                        <div class="col-6 p-0">
-                                            <p><b>
-                                                    <font style="vertical-align: inherit; ">
-                                                        <font style="vertical-align: inherit;">SAMPLE DESCRIPTIVE DIAGNOSIS
-                                                        </font>
-                                                    </font>
-                                                </b> <br>
-                                            </p>
-
-                                            </p>
-                                            <p> <b>
-                                                    <font style="vertical-align: inherit; font-size: 11px;">
-                                                        <font style="vertical-align: inherit;">
-                                                            Changes ? .............
-                                                        </font>
-                                                        <input class="form-control"
-                                                            style="
-     float: right; width: 50px !important; height: 25px!important;
-    display: inline; "
-                                                            type="text" name="destiny" value="YES">
-                                                    </font>
-                                                </b>
-                                            </p>
-                                            <p> <b>
-                                                    <font style="vertical-align: inherit; font-size: 11px;">
-                                                        <font style="vertical-align: inherit;">
-                                                            Changes 1 in benign cells ? .............
-                                                        </font>
-                                                        <input class="form-control"
-                                                            style="
-     float: right; width: 50px !important; height: 25px!important;
-    display: inline; "
-                                                            type="text" name="destiny" value="YES">
-                                                    </font>
-                                                </b>
-                                            </p>
-
-                                            <p> <b>
-                                                    <font style="vertical-align: inherit; font-size: 11px;">
-                                                        <font style="vertical-align: inherit;">
-                                                            <a href="#"> Changes 3 in glandular cells
-                                                                ?...............</a>
-                                                        </font>
-                                                        <input class="form-control"
-                                                            style="    color: #556ee6;
-     float: right; width: 50px !important; height: 25px!important;
-    display: inline; "
-                                                            type="text" name="destiny" value="YES">
-                                                    </font>
-                                                </b>
-                                            </p>
-
-
-
-                                        </div>
-
-                                        <p> <b>
-                                                <font style="vertical-align: inherit; font-size: 11px;">
-                                                    <font style="vertical-align: inherit;">
-                                                        Squamous epithelial cell changes:
-                                                    </font>
-                                                </font>
-                                            </b>
-                                        </p>
-
-                                    </div>
-
-                                    <div class="col-6">
-                                        <div style="float:right">
-
-                                            <input class="form-control"
-                                                style="margin-bottom:10px; width: 45px !important; height: 25px!important;
-                    display: inline;  "
-                                                type="text" name="destiny" value="">
-                                            <br />
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6  p-0">
-                                        <input class="form-control"
-                                            style="margin-bottom:10px;width: 100%!important; height: 25px!important;
-    display: inline;  "
-                                            type="text" name="destiny" value="">
-                                        <br />
-
-                                    </div>
-                                    <!--          <div class="col-3" style="display: flex;-->
-    <!--align-content: center;-->
-    <!--align-items: center;">-->
-                                    <!--              <div>-->
-                                    <div class="col-12 p-0">
-
-                                        <div class="d-flex">
-                                            <label> <b>note:</b> </label>
-                                            <textArea class="form-control" style="width: 100%!important; height: 45px!important;  display: inline;"></textArea>
-                                        </div>
-                                        <p> <b>
-                                                <font style="vertical-align: inherit; font-size: 11px;">
-                                                    <font style="vertical-align: inherit;">
-                                                        MICROBIOLOGY
-                                                    </font>
-                                                </font>
-                                            </b>
-                                        </p>
-                                    </div>
-
-                                    <!--</div>
-                      
-                 </div>-->
-                                    <div class="col-6">
-                                        <div style="float:right">
-                                            <input class="form-control"
-                                                style="margin-bottom:10px; width: 45px !important; height: 25px!important;
-                    display: inline;  "
-                                                type="text" name="destiny" value="">
-                                            <br />
-
-                                            <input class="form-control"
-                                                style="margin-bottom:10px; width: 45px !important; height: 25px!important;
-                    display: inline;  "
-                                                type="text" name="destiny" value="">
-                                            <br />
-                                            <p><input class="form-control"
-                                                    style="margin-bottom:10px; width: 45px !important; height: 25px!important;
-                    display: inline;  "
-                                                    type="text" name="destiny" value=""></p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6  p-0">
-                                        <input class="form-control"
-                                            style="margin-bottom:10px;width: 100%!important; height: 25px!important;
-    display: inline;  "
-                                            type="text" name="destiny" value="">
-                                        <br />
-                                        <input class="form-control"
-                                            style="margin-bottom:10px;width: 100%!important; height: 25px!important;
-    display: inline;  "
-                                            type="text" name="destiny" value="">
-                                        <br />
-                                        <p><input class="form-control"
-                                                style="margin-bottom:10px;width: 100%!important; height: 25px!important;
-    display: inline;  "
-                                                type="text" name="destiny" value=""></p>
-
-                                    </div>
-
-                                </div>
-                                <div class="col-12">
-
-                                    <p> <b>
-                                            <font style="vertical-align: inherit; font-size: 11px;">
-                                                <font style="vertical-align: inherit;">
-                                                    NILM - NEGATIVE FOR INTRA-EPITHELIAL LESION OR MALIGNITY IN THE EXAMINED
-                                                    MATERIAL
-                                                </font>
-                                            </font>
-                                        </b>
-                                    </p>
-                                    <div class="col-6  p-0">
-
-                                        <p> <b>
-                                                <font style="vertical-align: inherit; font-size: 11px;">
-                                                    <font style="vertical-align: inherit;">
-                                                        Changes 3 in glandular cells ?...............
-                                                    </font>
-                                                    <input class="form-control"
-                                                        style="    color: #556ee6;
-     float: right; width: 50px !important; height: 25px!important;
-    display: inline; "
-                                                        type="text" name="destiny" value="">
-                                                </font>
-                                            </b>
-                                        </p>
-                                    </div>
-                                    </div>
-                                </div>
+                                        type="text" name="destiny" value="NO"></font>
+                                </p>
 
 
 
 
 
+
+
+                            </div>
                             <div class="col-md-12 col-lg-4" style="border: 1px solid #eff2f7;">
                                 <p><b>
                                         <font style="vertical-align: inherit;">
@@ -559,71 +337,26 @@
                                         </font>
                                     </b>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"><a href="#"> &nbsp;
-                                                (UNSATISFACTORY)</a>
+                                        <font style="vertical-align: inherit;"><a href="#"> &nbsp; (SATISFACTORY)</a>
                                         </font>
                                     </font>
                                     </font>
                                 </p>
+                                <p></p>
                                 <font style="vertical-align: inherit;">
-                                    1 - Lactobacillus sp.
+                                    1-Yes
                                 </font> <br />
                                 <font style="vertical-align: inherit;">
-
-                                    2 - Coconuts
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-                                    3 - Fungal organisms morphologically consistent with Candida
-                                    sp.
-                                </font>
-                                <font style="vertical-align: inherit;">
-                                    4 - Trichomonas Varginalis
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-                                    5 - Supracytoplasmic bacilli (suggestive of Gardnerella sp./
-                                    Mobiluncus sp.)
-
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-
-                                    6 - Cocobacilli
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-                                    7 - Morphologically compatible bacteria with Actinomyces sp.
-                                </font>
-                                <font style="vertical-align: inherit;">
-                                    8 - Cytopathic effect compatible with viruses of the Herpes
-                                    simplex group.
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-                                    9 - Suggestive of Chlamydia sp.
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-                                    10 - Leptothrix Vaginalis
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-                                    11 - Fusobacterium spp.
-                                </font>
-                                <font style="vertical-align: inherit;">
-                                    12 - Other bacilli
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-                                    13 - Bacteria
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-
-                                    14 - OBS: Abundant bacterial flora.
-                                </font> <br />
-                                <font style="vertical-align: inherit;">
-                                    15 - Nothing noteworthy.
+                                    2-No
                                 </font>
                             </div>
+
                             <div class="col-8 mt-4">
                                 <div style="    float: right;">
                                     <button type="button" class="btn btn-outline-primary"><a
-                                            href="/inserir-resultado9">Cancel</a></button>
+                                            href="/inserir-resultado1">Cancel</a></button>
                                     <button type="button" class="btn btn-primary"><a style="color:white"
-                                            href="/inserir-resultado10">Save</a></button>
+                                            href="/inserir-resultado2">Save</a></button>
                                 </div>
                             </div>
                         </div>
@@ -632,20 +365,20 @@
 
             </div>
         </div>
-    @endsection
-    @section('script')
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('script'); ?>
         <!-- Plugins js -->
-        <script src="{{ URL::asset('assets/libs/datatables/datatables.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/libs/jszip/jszip.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/libs/pdfmake/pdfmake.min.js') }}"></script>
+        <script src="<?php echo e(URL::asset('assets/libs/datatables/datatables.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('assets/libs/jszip/jszip.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('assets/libs/pdfmake/pdfmake.min.js')); ?>"></script>
         <!-- Init js-->
-        <script src="{{ URL::asset('assets/js/pages/datatables.init.js') }}"></script>
-        <script src="{{ URL::asset('assets/js/pages/notification.init.js') }}"></script>
+        <script src="<?php echo e(URL::asset('assets/js/pages/datatables.init.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('assets/js/pages/notification.init.js')); ?>"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-    @endsection
-    @section('script-bottom')
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('script-bottom'); ?>
         <script>
             var cytology_subitem = []
 
@@ -655,7 +388,7 @@
                     url: "show-appointment-detail",
                     data: {
                         id: id,
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
 
@@ -709,7 +442,7 @@
                     data: {
                         id: id,
                         status: status,
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
                         console.log(data);
@@ -726,7 +459,7 @@
                     data: {
                         id: id,
                         appoint_id: appoint_id,
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
                         console.log(data);
@@ -747,7 +480,7 @@
                                     "</h5><input onkeyup='getCode(this)'  type='text' id='" + data.cytolies[0]
                                     .name +
                                     "' data-id  style='width:50px !important;'class='form-control cytology_subitem'></div>"
-                                    );
+                                );
                                 data.cytology_subitems.forEach(function(item) {
                                     if (item.cytology_Id == 24) {
                                         $('.question_box span').text('SATISFACTORY');
@@ -913,7 +646,7 @@
                     data: {
                         data: res_array,
                         table_json: JSON.stringify(table_json),
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
                         console.log(data);
@@ -972,7 +705,7 @@
                         'Status': Status,
                         appointment_id: id,
                         exam_id: exam_id,
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
                         //console.log(data);return false;
@@ -1020,7 +753,7 @@
                     $('.question_box span').text('SAMPLE STANDARD');
                     $('.table_data').append(
                         "<div style='display:flex' class='mt-3 second_question'><h5>Sample Standard:</h5><input  onkeyup='anotherQuestion(this)' type='text' value='' id='SAMPLE STANDARD' data-id=27 style='width:50px !important;' class='form-control second_question_parameter'></div>"
-                        );
+                    );
                     cytology_subitem.forEach(function(item) {
                         if (item.cytology_Id == 27) {
 
@@ -1038,7 +771,7 @@
                     $('.question_box span').text('Changes');
                     $('.table_data').append(
                         "<div style='display:flex; flex-wrap: wrap;' class='mt-3 third_question_changes'><h5>Changes?</h5><input value=''  onkeyup='changes_parameter_keyup(this,event)' id='Changes?' style='width:50px !important;' type='text' data-id=24 class='form-control '></div>"
-                        );
+                    );
                     cytology_subitem.forEach(function(item) {
                         if (item.cytology_Id == 24) {
                             $('.question_box').append("<p>" + item.code + ":" + item.cytology_subitem + "</p>");
@@ -1056,10 +789,10 @@
                         $('.question_box span').text('UNSATISFACTORY');
                         $('.table_data').append(
                             "<div class='third_all_div'><div style='display:flex; flex-wrap: wrap;' class='mt-3 third_question'><h5>UNSATISFACTORY:</h5><input  onkeyup='thirdQuestion(this)' style='width:50px !important;' type='text' data-id class='form-control third_question_parameter'></div><div style='display:flex; flex-wrap: wrap;' class='mt-3 third_question1'><input  onkeyup='thirdQuestion(this)' style='width:50px !important;' type='text' data-id class='form-control third_question_parameter'></div></div>"
-                            );
+                        );
                         $('.table_data').append(
                             "<div class='third_all_div'><div style='display:flex; width:100% !important' class='mt-3 fourth_question'><h5>MICROBIOLOGY:</h5><input  onkeyup='fourth_Question(this)' style='width:50px !important;' type='text' data-id class='form-control FOURTH_question_parameter'></div><div style='display:block; width:100%;' class='mt-3 fourth_question1'><input  onkeyup='fourth_Question(this)' style='width:50px !important;' type='text' data-id class='form-control FOURTH_question_parameter'></div><div style='display:block; width:100%;' class='mt-3 fourth_question2'><input  onkeyup='fourth_Question(this)' style='width:50px !important;' type='text' data-id class='form-control FOURTH_question_parameter'></div><div style='display:block;width:100%;' class='mt-3 fourth_question3'><input  onkeyup='fourth_Question(this)' style='width:50px !important;' type='text' data-id class='form-control FOURTH_question_parameter'></div></div>"
-                            );
+                        );
                         cytology_subitem.forEach(function(item) {
                             if (item.cytology_Id == 25) {
                                 $('.question_box').append("<p>" + item.code + ":" + item.cytology_subitem +
@@ -1073,7 +806,7 @@
                         //$('.table_data').find('.third_question').remove();
                         $('.table_data').append(
                             "<div style='display:flex; flex-wrap: wrap;' class='mt-3 third_question'><h5>EPITHELIALS:</h5><input  onkeyup='thirdQuestion(this)' value='' id='EPITHELIALS:' style='width:50px !important;' type='text' data-id class='form-control third_question_parameter_1'></div>"
-                            );
+                        );
                         cytology_subitem.forEach(function(item) {
                             if (item.cytology_Id == 28) {
 
@@ -1229,7 +962,7 @@
                         $('.question_box span').text('(MICROBIOLOGY)');
                         $('.table_data').append(
                             "<div class='all_div'><div style='display:flex; width:100% !important;' class='mt-3 fourth_question'><h5>MICROBIOLOGY:</h5><input  onkeyup='fourth_Question(this)' style='width:50px !important;' type='text' data-id class='form-control FOURTH_question_parameter'></div><div style='display:flex' class='mt-3 fourth_question1'><input  onkeyup='fourth_Question(this)' style='width:50px !important;' type='text' data-id class='form-control FOURTH_question_parameter'></div><div style='display:flex' class='mt-3 fourth_question2'><input  onkeyup='fourth_Question(this)' style='width:50px !important;' type='text' data-id class='form-control FOURTH_question_parameter'></div><div style='display:flex' class='mt-3 fourth_question3'><input  onkeyup='fourth_Question(this)' style='width:50px !important;' type='text' data-id class='form-control FOURTH_question_parameter'></div></div>"
-                            );
+                        );
                         cytology_subitem.forEach(function(item) {
                             if (item.cytology_Id == 25) {
                                 $('.question_box').append("<p>" + item.code + ":" + item.cytology_subitem + "</p>");
@@ -1241,7 +974,7 @@
 
                         $('.table_data').append(
                             "<div style='display:flex; flex-wrap: wrap;' class='mt-3 third_question_changes_1'><h5>Changes in benign cells ?</h5><input id='Changes in benign cells ?' onkeyup='changes_parameter_option(this,event)' value=2 style='width:50px !important;' type='text' data-id=29 data-lengthclass='form-control changes_input_click'><h6>No</h6></div><div style='display:flex; flex-wrap: wrap;' class='mt-3 third_question_changes_1'><h5>Changes in squamous epithelial cells ?</h5><input value=2 id='Changes in squamous epithelial cells ?' onkeyup='changes_parameter_option(this,event)' style='width:50px !important;' type='text' data-id=30 class='form-control changes_input_click'><h6>No</h6></div><div style='display:flex; flex-wrap: wrap;' class='mt-3 third_question_changes_1'><h5>Changes in glandular cells ?</h5><input  id='Changes in glandular cells ?' value=2 onkeyup='changes_parameter_option(this,event)' style='width:50px !important;' type='text' data-id=31 class='form-control changes_input_click'><h6>No</h6></div>"
-                            );
+                        );
                         cytology_subitem.forEach(function(item) {
                             if (item.cytology_Id == 24) {
                                 $('.question_box').append("<p>" + item.code + ":" + item.cytology_subitem + "</p>");
@@ -1322,4 +1055,6 @@
                 });
             }
         </script>
-    @endsection
+    <?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master-layouts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\sislac\resources\views/appointment/add-appointment1.blade.php ENDPATH**/ ?>

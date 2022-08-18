@@ -671,7 +671,27 @@ class AppointmentController extends Controller
        return view('appointment.add-appointment10', compact('appointments','user','role'));
       
    }
-
+   public function verifyResult(Request $request){
+    $user = Sentinel::getUser(); 
+   if ($user->hasAccess('appointment.list')) {
+       $user_id = Sentinel::getUser()->id;
+       $role = $user->roles[0]->slug;    
+     $appointments= Appointment::all();
+}
+   return view('appointment.verify-result', compact('appointments','user','role'));
+}
+public function verifyResultApproves(Request $request){
+    // return $request;
+    $user = Sentinel::getUser(); 
+    if ($user->hasAccess('appointment.list')) {
+        $user_id = Sentinel::getUser()->id;
+        $role = $user->roles[0]->slug;    
+      $appointments= Appointment::all();
+ }
+    // return view('appointment.verify-result', compact('appointments','user','role'));
+ $approved = $request->approve; 
+return view('appointment.verify-result', compact('approved','appointments','user','role'));
+}
 
     public function showAppointmentDetail(Request $request){		
         $appointments= Appointment::where('id',$request->id)->get();  

@@ -1,7 +1,7 @@
-@extends('layouts.master-layouts')
-@section('title')
-    {{ __('New Appointement Page') }}
-@endsection
+<?php $__env->startSection('title'); ?>
+    <?php echo e(__('New Appointement Page')); ?>
+
+<?php $__env->stopSection(); ?>
 <style>
     body {
         background-color: #f8f8fb !important;
@@ -167,31 +167,31 @@
         width: 100% !important;
     }
 </style>
-@section('body')
+<?php $__env->startSection('body'); ?>
 
     <body data-topbar="dark" data-layout="horizontal">
-    @endsection
-    @section('content')
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('content'); ?>
         <!-- start page title -->
-        @component('components.breadcrumb')
-            @slot('title')
+        <?php $__env->startComponent('components.breadcrumb'); ?>
+            <?php $__env->slot('title'); ?>
                 INSERIR RESULTADO
-            @endslot
-            @slot('li_1')
+            <?php $__env->endSlot(); ?>
+            <?php $__env->slot('li_1'); ?>
                 Dashboard
-            @endslot
-            @slot('li_2')
+            <?php $__env->endSlot(); ?>
+            <?php $__env->slot('li_2'); ?>
                 Appointment
-            @endslot
-        @endcomponent
+            <?php $__env->endSlot(); ?>
+        <?php echo $__env->renderComponent(); ?>
         <div class="row">
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ url('pending-appointment') }}">
+                        <a href="<?php echo e(url('pending-appointment')); ?>">
                             <button class="btn btn-primary" type="button">
 
-                                {{ __('Back Appointment') }}</button></a>
+                                <?php echo e(__('Back Appointment')); ?></button></a>
 
 
                         <!-- Tab panes -->
@@ -203,12 +203,12 @@
                                         style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
                                             <tr>
-                                                <th>{{ __('Id Appointment') }}</th>
-                                                <th>{{ __('name') }}</th>
-                                                <th>{{ __('Sex') }}</th>
-                                                <th>{{ __('Idade') }}</th>
-                                                <th>{{ __('Date') }}</th>
-                                                <th>{{ __('Status') }}</th>
+                                                <th><?php echo e(__('Id Appointment')); ?></th>
+                                                <th><?php echo e(__('name')); ?></th>
+                                                <th><?php echo e(__('Sex')); ?></th>
+                                                <th><?php echo e(__('Idade')); ?></th>
+                                                <th><?php echo e(__('Date')); ?></th>
+                                                <th><?php echo e(__('Status')); ?></th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -632,20 +632,20 @@
 
             </div>
         </div>
-    @endsection
-    @section('script')
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('script'); ?>
         <!-- Plugins js -->
-        <script src="{{ URL::asset('assets/libs/datatables/datatables.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/libs/jszip/jszip.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/libs/pdfmake/pdfmake.min.js') }}"></script>
+        <script src="<?php echo e(URL::asset('assets/libs/datatables/datatables.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('assets/libs/jszip/jszip.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('assets/libs/pdfmake/pdfmake.min.js')); ?>"></script>
         <!-- Init js-->
-        <script src="{{ URL::asset('assets/js/pages/datatables.init.js') }}"></script>
-        <script src="{{ URL::asset('assets/js/pages/notification.init.js') }}"></script>
+        <script src="<?php echo e(URL::asset('assets/js/pages/datatables.init.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('assets/js/pages/notification.init.js')); ?>"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-    @endsection
-    @section('script-bottom')
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('script-bottom'); ?>
         <script>
             var cytology_subitem = []
 
@@ -655,7 +655,7 @@
                     url: "show-appointment-detail",
                     data: {
                         id: id,
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
 
@@ -709,7 +709,7 @@
                     data: {
                         id: id,
                         status: status,
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
                         console.log(data);
@@ -726,7 +726,7 @@
                     data: {
                         id: id,
                         appoint_id: appoint_id,
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
                         console.log(data);
@@ -913,7 +913,7 @@
                     data: {
                         data: res_array,
                         table_json: JSON.stringify(table_json),
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
                         console.log(data);
@@ -972,7 +972,7 @@
                         'Status': Status,
                         appointment_id: id,
                         exam_id: exam_id,
-                        "_token": "{{ csrf_token() }}"
+                        "_token": "<?php echo e(csrf_token()); ?>"
                     },
                     success: function(data) {
                         //console.log(data);return false;
@@ -1322,4 +1322,6 @@
                 });
             }
         </script>
-    @endsection
+    <?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master-layouts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\sislac\resources\views/appointment/add-appointment9.blade.php ENDPATH**/ ?>
