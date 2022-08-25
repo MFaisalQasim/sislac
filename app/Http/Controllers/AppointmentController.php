@@ -567,110 +567,12 @@ class AppointmentController extends Controller
             $user_id = Sentinel::getUser()->id;
             $role = $user->roles[0]->slug;    
           $appointments= Appointment::all();
+        //   dd( $appointments , $user_id , $role , $user);
     }
         return view('appointment.add-appointment', compact('appointments','user','role'));
        
     }
-    public function appointmentdata1(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment1', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata2(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment2', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata3(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment3', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata4(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment4', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata5(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment5', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata6(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment6', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata7(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment7', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata8(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment8', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata9(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment9', compact('appointments','user','role'));
-      
-   }
-   public function appointmentdata10(){  
-        $user = Sentinel::getUser();  
-         if ($user->hasAccess('appointment.list')) {
-           $user_id = Sentinel::getUser()->id;
-           $role = $user->roles[0]->slug;    
-         $appointments= Appointment::all();
-   }
-       return view('appointment.add-appointment10', compact('appointments','user','role'));
-      
-   }
+    
    public function verifyResult(Request $request){
     $user = Sentinel::getUser(); 
    if ($user->hasAccess('appointment.list')) {

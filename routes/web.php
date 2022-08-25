@@ -70,16 +70,6 @@ Route::post('show-appointment-detail', 'AppointmentController@showAppointmentDet
 Route::post('get-exam-parameter', 'AppointmentController@getExamParameter');
 Route::get('appointmentList', 'AppointmentController@appointment_list');
 Route::get('inserir-resultado', 'AppointmentController@appointmentdata');
-Route::get('inserir-resultado1', 'AppointmentController@appointmentdata1');
-Route::get('inserir-resultado2', 'AppointmentController@appointmentdata2');
-Route::get('inserir-resultado3', 'AppointmentController@appointmentdata3');
-Route::get('inserir-resultado4', 'AppointmentController@appointmentdata4');
-Route::get('inserir-resultado5', 'AppointmentController@appointmentdata5');
-Route::get('inserir-resultado6', 'AppointmentController@appointmentdata6');
-Route::get('inserir-resultado7', 'AppointmentController@appointmentdata7');
-Route::get('inserir-resultado8', 'AppointmentController@appointmentdata8');
-Route::get('inserir-resultado9', 'AppointmentController@appointmentdata9');
-Route::get('inserir-resultado10', 'AppointmentController@appointmentdata10');
 
 Route::get('verificar-resultado', 'AppointmentController@verifyResult');
 Route::get('verificar-resultado/approve', 'AppointmentController@verifyResultApproves');
