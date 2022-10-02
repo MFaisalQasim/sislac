@@ -1,2 +1,2 @@
 # sislac
- client based app
+Medical Prescription System 
